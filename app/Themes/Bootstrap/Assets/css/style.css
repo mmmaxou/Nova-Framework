@@ -1,0 +1,172 @@
+/* Your styles here */
+:root {
+    --primary-color: #78c6bf;
+}
+body {
+    background-image: url("../images/circles-and-roundabouts.png");
+    padding-bottom: 200px;
+}
+#body-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(54, 54, 54, 0.78);
+    z-index:1;
+    top: 0;
+    left: 0;
+}
+.hidden {
+    visibility: hidden;
+}
+
+.content {
+    margin-top: 80px;
+}
+nav {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    width: 100vw;
+    -webkit-box-shadow: 0px 7px 21px -4px rgba(0,0,0,0.62);
+    -moz-box-shadow: 0px 7px 21px -4px rgba(0,0,0,0.62);
+    box-shadow: 0px 7px 21px -4px rgba(0,0,0,0.62);
+    background-color: rgba(255,255,255,1);
+}
+nav div {
+    float: left;
+    margin-right: 25px;
+}
+#add {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-size:24px;
+    background-color: #f52b2b;
+    position: absolute;
+    right: 50px;
+    top: 25px;
+}
+
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+}
+.list > * {
+    width: calc(20% - 15px);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.list > *:nth-child(5n) {
+    background-image: url("../images/pattern-1.png");
+}
+.list > *:nth-child(5n+1) {
+    background-image: url("../images/pattern-2.png");
+}
+.list > *:nth-child(5n+2) {
+    background-image: url("../images/pattern-3.png");
+}
+.list > *:nth-child(5n+3) {
+    background-image: url("../images/pattern-4.png");
+}
+.list > *:nth-child(5n+4) {
+    background-image: url("../images/pattern-5.png");
+}
+.list > * > * {
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+.list p,
+.list .song a {
+    margin:0;
+    font-weight: bold;
+    text-align: center;
+}
+.list > *:hover,
+.list .song > *:hover {
+    text-decoration: none;
+}
+.list > *:hover p,
+.list .song:hover a{ 
+    color: white;
+    cursor: pointer;
+}
+.list .song-style {
+    position: absolute;
+    bottom: 5px;
+}
+
+.song {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.song-style p{
+    font-weight: normal;
+}
+.song-style p::before,
+.song-style p::after {
+    content: " - "
+}
+
+#form-chanson {
+    border-radius: 5px;
+    padding: 15px;
+    background-color: white;
+    -webkit-box-shadow: 0px 7px 21px -4px rgba(0,0,0,0.62);
+    -moz-box-shadow: 0px 7px 21px -4px rgba(0,0,0,0.62);
+    box-shadow: 0px 7px 21px -4px rgba(0,0,0,0.62);
+    position: fixed;
+    top: 50px;
+    z-index: 3;
+    top: 90px;
+    right: 30px;
+}
+#form-chanson progress {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* -----------------
+Audio
+*/
+
+#audio-player{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left:0px;
+    text-align:center;
+}
+#audio-player .reduce {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    cursor: pointer;
+}
+#audio-player > *{
+    background-color: #ffffff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 7px 21px -4px rgba(0,0,0,0.62);
+    -moz-box-shadow: 0px 7px 21px -4px rgba(0,0,0,0.62);
+    box-shadow: 0px 7px 21px -4px rgba(0,0,0,0.62);
+    width: 80%;
+    padding: 15px;
+    margin:auto;
+    position: relative;
+}
+#audio-player audio {
+    width: 100%;
+}
